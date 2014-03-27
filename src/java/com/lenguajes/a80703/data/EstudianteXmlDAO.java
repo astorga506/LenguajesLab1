@@ -73,27 +73,36 @@ public class EstudianteXmlDAO {
             eEstudiante.addContent(eApellidos);
             eEstudiante.addContent(eNotaAdmision);
             eEstudiante.addContent(eCodCarrera);
-
-            int i = 0;
-
-            while (i < raiz.getContentSize()) {
-                Element elemTemp = (Element) raiz.getContent(i);
-                if (elemTemp.getChildText("apellidos").compareToIgnoreCase(eEstudiante.getChildText("apellidos")) > 0) {                    
-                    raiz.addContent(i, eEstudiante);      
-                    eEstudiante = elemTemp;
-                }
-                i++;
-            }
+//
+//            int i = 0;
+//            while (i < raiz.getContentSize()) {
+//                Element elemTemp = (Element) raiz.getContent(i);
+//                String nomCompletoActual = elemTemp.getChildText("apellidos") + " " + elemTemp.getChildText("nombre");
+//                String nombCompletoInsrt = eEstudiante.getChildText("apellidos") +
+//                                                                            " " + eEstudiante.getChildText("nombre");
+//                if (nomCompletoActual.compareToIgnoreCase(nombCompletoInsrt) > 0) {
+//                    raiz.addContent(i, eEstudiante);
+//                    eEstudiante = elemTemp;
+//
+//                    for (int j = i + 1; j < raiz.getContentSize(); j++) {
+//                        elemTemp = (Element) raiz.getContent(j);
+//                        raiz.addContent(j, eEstudiante);
+//                        eEstudiante = elemTemp;
+//                    }//for
+//
+//                }//if
+//                i++;
+//            }//while
+//
+//            raiz.addContent(i, eEstudiante);
             
-            if(i >= raiz.getContentSize()){
-               raiz.addContent(eEstudiante);
-            }
-                      
+            raiz.addContent(eEstudiante);
+
             guardar();
-        }
+        }//else
 
         return estudiante;
-    }
+    }//insertar
 
     private boolean existeEstudiante(Estudiante estudiante) {
 
@@ -103,11 +112,9 @@ public class EstudianteXmlDAO {
         List<Element> estudiantesElement = raiz.getChildren();
 
         while (i < estudiantesElement.size() && encontrado == false) {
-            //while (i < raiz.getContentSize()) {            
-            Element elemTemp = estudiantesElement.get(i);
-            //elemTemp = (Element) raiz.getContent(i);            
-            if (estudiante.getNombre().equalsIgnoreCase(elemTemp.getChildText("nombre")) &&
-                    estudiante.getApellidos().equalsIgnoreCase(elemTemp.getChildText("apellidos"))) {
+            Element elemTemp = estudiantesElement.get(i);      
+            if (estudiante.getNombre().equalsIgnoreCase(elemTemp.getChildText("nombre"))
+                    && estudiante.getApellidos().equalsIgnoreCase(elemTemp.getChildText("apellidos"))) {
                 encontrado = true;
                 break;
             }//if
