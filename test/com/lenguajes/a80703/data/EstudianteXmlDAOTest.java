@@ -8,7 +8,7 @@ package com.lenguajes.a80703.data;
 import com.lenguajes.a80703.domain.Carrera;
 import com.lenguajes.a80703.domain.Estudiante;
 import com.lenguajes.a80703.util.exceptions.EstudianteExisteException;
-import com.lenguajes.a80703.util.exceptions.RutasArchivos;
+import com.lenguajes.a80703.util.RutasArchivos;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

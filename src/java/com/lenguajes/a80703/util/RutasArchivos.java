@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.lenguajes.a80703.util.exceptions;
+package com.lenguajes.a80703.util;
 
 /**
  *
@@ -11,7 +11,7 @@ package com.lenguajes.a80703.util.exceptions;
  */
 public interface RutasArchivos {
 
-    String CARRERAS_FILE_PATH = "C:\\Users\\Carlos\\Desktop\\carreras.xml";
-    String ESTUDIANTES_FILE_PATH = "C:\\Users\\Carlos\\Desktop\\estudiantes.xml";
+    String CARRERAS_FILE_PATH = "C:\\Users\\Equipo\\Desktop\\carreras.xml";
+    String ESTUDIANTES_FILE_PATH = "C:\\Users\\Equipo\\Desktop\\estudiantes.xml";
 
 }
