@@ -27,7 +27,6 @@ public class CarreraXmlDAO {
     private String rutaDocumento;
 
     public CarreraXmlDAO(String rutaDocumento) throws JDOMException, IOException {
-
         this.rutaDocumento = rutaDocumento;
         File file = new File(rutaDocumento);
 

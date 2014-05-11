@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>InsertarEstudianteServlet</servlet-name>
+        <servlet-class>com.lenguajes.a80703.application.servlet.InsertarEstudianteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProcesarEstudianteServlet</servlet-name>
+        <servlet-class>com.lenguajes.a80703.application.servlet.ProcesarEstudianteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertarEstudianteServlet</servlet-name>
+        <url-pattern>/insertarEstudiante</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProcesarEstudianteServlet</servlet-name>
+        <url-pattern>/procesarEstudiante</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

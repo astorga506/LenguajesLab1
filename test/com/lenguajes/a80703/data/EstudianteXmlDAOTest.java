@@ -25,9 +25,6 @@ public class EstudianteXmlDAOTest {
 
     private EstudianteXmlDAO eXml;
 
-    public EstudianteXmlDAOTest() {
-    }
-
     @Before
     public void setUp() {
         try {
@@ -58,6 +55,7 @@ public class EstudianteXmlDAOTest {
 
         try {
             eXml.insertar(e1);
+            eXml.insertar(e2);
             eXml.insertar(e2);
             eXml.insertar(e3);
             eXml.insertar(e4);

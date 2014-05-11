@@ -11,7 +11,7 @@ package com.lenguajes.a80703.util;
  */
 public interface RutasArchivos {
 
-    String CARRERAS_FILE_PATH = "C:\\Users\\Equipo\\Desktop\\carreras.xml";
-    String ESTUDIANTES_FILE_PATH = "C:\\Users\\Equipo\\Desktop\\estudiantes.xml";
+    String CARRERAS_FILE_PATH = "Z:\\Documentos\\UCR\\IF-4101\\Lab1\\carreras.xml";
+    String ESTUDIANTES_FILE_PATH = "Z:\\Documentos\\UCR\\IF-4101\\Lab1\\estudiantes.xml";
 
 }
