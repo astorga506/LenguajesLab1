@@ -36,17 +36,13 @@ public class InsertarEstudianteServlet extends HttpServlet {
             rd.forward(request, response);
         } catch (JDOMException ex) {
             Logger.getLogger(InsertarEstudianteServlet.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(InsertarEstudianteServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }//catch
+        }
 
     }//doGet
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
-        rd.forward(request, response);
     }
 
 }//InsertarEstudianteServlet
