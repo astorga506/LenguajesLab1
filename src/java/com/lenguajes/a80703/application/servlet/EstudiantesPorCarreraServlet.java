@@ -26,20 +26,21 @@ import org.jdom.JDOMException;
  * @author Carlos
  */
 public class EstudiantesPorCarreraServlet extends HttpServlet {
-    
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
             int codCarrera = Integer.parseInt(request.getParameter("carrera"));
             EstudianteXmlDAO eXml = new EstudianteXmlDAO(RutasArchivos.ESTUDIANTES_FILE_PATH);
-            LinkedList<Estudiante> estudiantes = eXml.getEstudiantes(codCarrera);            
+            LinkedList<Estudiante> estudiantes = eXml.getEstudiantes(codCarrera);
             RequestDispatcher rd = request.getRequestDispatcher("/verEstudiantes.jsp");
             request.setAttribute("estudiantes", estudiantes);
             rd.forward(request, response);
         } catch (JDOMException ex) {
             Logger.getLogger(EstudiantesPorCarreraServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
+
     }
 
     @Override
@@ -47,11 +48,10 @@ public class EstudiantesPorCarreraServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             CarreraXmlDAO cXml = new CarreraXmlDAO(RutasArchivos.CARRERAS_FILE_PATH);
-            LinkedList<Carrera> carreras = cXml.getCarreras();            
+            LinkedList<Carrera> carreras = cXml.getCarreras();
             RequestDispatcher rd = request.getRequestDispatcher("/estudiantesPorCarrera.jsp");
             request.setAttribute("carreras", carreras);
             rd.forward(request, response);
-
         } catch (JDOMException ex) {
             Logger.getLogger(EstudiantesPorCarreraServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
