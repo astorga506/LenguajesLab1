@@ -46,7 +46,6 @@ public class EstudianteXmlDAO {
     }
 
     private void guardar() throws IOException {
-
         XMLOutputter xmlOutputter = new XMLOutputter();
         xmlOutputter.output(documento, new PrintWriter(rutaDocumento));
 
@@ -82,7 +81,7 @@ public class EstudianteXmlDAO {
                 }//if
                 i++;
             }//while
-//
+
             raiz.addContent(i, eEstudiante);
             guardar();
         }//else
@@ -91,16 +90,13 @@ public class EstudianteXmlDAO {
     }//insertar
 
     private boolean existeEstudiante(Estudiante estudiante) {
-
         boolean encontrado = false;
         int i = 0;
-
         List<Element> estudiantesElement = raiz.getChildren();
 
         while (i < estudiantesElement.size() && encontrado == false) {
             Element elemTemp = estudiantesElement.get(i);      
-            if (estudiante.getNombre().equalsIgnoreCase(elemTemp.getChildText("nombre"))
-                    && estudiante.getApellidos().equalsIgnoreCase(elemTemp.getChildText("apellidos"))) {
+            if (estudiante.getApellidos().equalsIgnoreCase(elemTemp.getChildText("apellidos"))) {
                 encontrado = true;
                 break;
             }//if

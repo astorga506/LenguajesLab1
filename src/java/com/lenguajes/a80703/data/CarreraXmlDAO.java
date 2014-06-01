@@ -90,6 +90,7 @@ public class CarreraXmlDAO {
                 raiz.removeContent(i);
                 guardar();
             }//if
+            i++;
         }//while
     }//eliminar
     

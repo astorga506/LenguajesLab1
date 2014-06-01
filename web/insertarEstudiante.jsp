@@ -14,7 +14,7 @@
     </head>
     <body>
         <h1>Informaci&oacute;n del estudiante:</h1>
-        <form action="./procesarEstudiante" method="post">
+        <form action="./insertarEstudiante" method="post">
             <p>Carn&eacute;: <input name="carne" type="text"></p>
             <p>Nombre: <input name="nombre" style="width: 270px" type="text"></p>
             <p>Apellidos: <input name="apellidos" style="width: 270px" type="text"></p>

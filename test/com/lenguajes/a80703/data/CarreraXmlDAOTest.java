@@ -41,18 +41,20 @@ public class CarreraXmlDAOTest {
 
      @Test
      public void hello() {    
-//        try {
-//            Carrera c1 = new Carrera(6000, "Informática Empresarial");
-//            Carrera c2 = new Carrera(1000, "Turismo Ecológico");
-//            Carrera c3 = new Carrera(2000, "Direcciòn de Empresas");
-//            Carrera c4 = new Carrera(3000, "Informática Educativa");
-//            cXml.insertar(c1);
-//            cXml.insertar(c2);
-//            cXml.insertar(c3);
-//            cXml.insertar(c4);
-//        } catch (IOException ex) {
-//            Logger.getLogger(CarreraXmlDAOTest.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+        try {
+            Carrera c1 = new Carrera(6000, "Informática Empresarial");
+            Carrera c2 = new Carrera(1000, "Turismo Ecológico");
+            Carrera c3 = new Carrera(2000, "Direcciòn de Empresas");
+            Carrera c4 = new Carrera(3000, "Informática Educativa");
+            cXml.insertar(c1);
+            cXml.insertar(c2);
+            cXml.insertar(c3);
+            cXml.insertar(c4);
+            
+            cXml.eliminar(1000);
+        } catch (IOException ex) {
+            Logger.getLogger(CarreraXmlDAOTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
          
          LinkedList<Carrera> carreras = cXml.getCarreras();
          for (Carrera carrera : carreras) {

@@ -5,20 +5,12 @@
         <servlet-class>com.lenguajes.a80703.application.servlet.InsertarEstudianteServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ProcesarEstudianteServlet</servlet-name>
-        <servlet-class>com.lenguajes.a80703.application.servlet.ProcesarEstudianteServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>EstudiantesPorCarreraServlet</servlet-name>
         <servlet-class>com.lenguajes.a80703.application.servlet.EstudiantesPorCarreraServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>InsertarEstudianteServlet</servlet-name>
         <url-pattern>/insertarEstudiante</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ProcesarEstudianteServlet</servlet-name>
-        <url-pattern>/procesarEstudiante</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>EstudiantesPorCarreraServlet</servlet-name>
